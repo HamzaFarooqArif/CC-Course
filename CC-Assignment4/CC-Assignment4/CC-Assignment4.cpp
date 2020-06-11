@@ -94,14 +94,29 @@ public:
         }
         return false;
     }
+
+    bool checkLeftFactoring()
+    {
+        for (int i = 0; i < rhs.size(); i++)
+        {
+            if (rhs[i][0].type == Terminal)
+            {
+                for (int j = i + 1; j < rhs.size(); j++)
+                {
+                    if (rhs[j][0].name == rhs[i][0].name && rhs[i][0].type == Terminal) return true;
+                }
+            }
+        }
+        return false;
+    }
 };
 
 int main()
 {
-    GrammerRule g1("L");
-    g1.addAtRight("L", NonTerminal, true);
-    g1.addAtRight("B", NonTerminal);
-    g1.addAtRight("C", NonTerminal, true);
+    GrammerRule g1("A");
+    g1.addAtRight("b", Terminal, true);
+    g1.addAtRight("c", Terminal);
+    g1.addAtRight("b", NonTerminal, true);
     g1.print();
-    cout << g1.checkLeftRecursion() << endl;
+    cout << g1.checkLeftFactoring() << endl;
 }
