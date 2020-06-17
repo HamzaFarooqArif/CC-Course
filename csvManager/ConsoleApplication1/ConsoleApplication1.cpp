@@ -33,12 +33,28 @@ public:
             for (int j = 0; getline(lineStream, cell, ','); j++)
             {
                 if (maxCols < j + 1) maxCols = j + 1;
-                cellsLine.push_back(cell);
+                cellsLine.push_back(rectifyString(cell));
             }
             fileContent.push_back(cellsLine);
         }
         iFile.close();
         return read;
+    }
+
+    string rectifyString(string str)
+    {
+        string result = "";
+        for (int i = 0; i < str.length(); i++)
+        {
+            if (validateCharacter(str[i])) result += str[i];
+        }
+        return result;
+    }
+
+    bool validateCharacter(char c)
+    {
+        if (c > -1 && c < 255) return true;
+        return false;
     }
 
     void addCell(string cell, int row, int col)
@@ -78,7 +94,7 @@ public:
         {
             for (int j = 0; j < fileContent[i].size(); j++)
             {
-                cout << i <<" "<< j << " " << fileContent[i][j] << endl;
+                cout << i << " " << j << " " << fileContent[i][j] << endl;
             }
         }
     }

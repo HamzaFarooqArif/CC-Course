@@ -10,6 +10,118 @@ using namespace std;
 
 enum symbolType {Terminal, NonTerminal};
 
+class csvManager
+{
+public:
+    int maxRows;
+    int maxCols;
+    vector<vector<string>> fileContent;
+
+    csvManager()
+    {
+        maxRows = 0;
+        maxCols = 0;
+    }
+
+    bool read(string filePath)
+    {
+        ifstream  iFile(filePath);
+        bool read = iFile.good();
+        string line;
+        for (int i = 0; getline(iFile, line); i++)
+        {
+            if (maxRows < i + 1) maxRows = i + 1;
+            stringstream  lineStream(line);
+            string        cell;
+            vector<string> cellsLine;
+            for (int j = 0; getline(lineStream, cell, ','); j++)
+            {
+                if (maxCols < j + 1) maxCols = j + 1;
+                cellsLine.push_back(rectifyString(cell));
+            }
+            fileContent.push_back(cellsLine);
+        }
+        iFile.close();
+        return read;
+    }
+
+    string rectifyString(string str)
+    {
+        string result = "";
+        for (int i = 0; i < str.length(); i++)
+        {
+            if (validateCharacter(str[i])) result += str[i];
+        }
+        return result;
+    }
+
+    bool validateCharacter(char c)
+    {
+        if (c > -1 && c < 255) return true;
+        return false;
+    }
+
+    void addCell(string cell, int row, int col)
+    {
+
+        for (int i = 0; i < row + 1; i++)
+        {
+            if (fileContent.size() < i + 1)
+            {
+                vector<string> cellsLine;
+                fileContent.push_back(cellsLine);
+            }
+            for (int j = 0; j < col + 1; j++)
+            {
+                if (fileContent[i].size() < j + 1) fileContent[i].push_back("");
+            }
+        }
+
+        fileContent[row][col] = cell;
+    }
+
+    void refreshDimensions()
+    {
+        for (int i = 0; i < fileContent.size(); i++)
+        {
+            if (maxRows < i + 1) maxRows = i + 1;
+            for (int j = 0; j < fileContent[i].size(); j++)
+            {
+                if (maxCols < j + 1) maxCols = j + 1;
+            }
+        }
+    }
+
+    void print()
+    {
+        for (int i = 0; i < fileContent.size(); i++)
+        {
+            for (int j = 0; j < fileContent[i].size(); j++)
+            {
+                cout << i << " " << j << " " << fileContent[i][j] << endl;
+            }
+        }
+    }
+
+    bool writeToFile(string filePath)
+    {
+        ofstream oFile;
+        oFile.open(filePath);
+        bool read = oFile.good();
+        for (int i = 0; i < fileContent.size(); i++)
+        {
+            for (int j = 0; j < fileContent[i].size(); j++)
+            {
+                if (j == 0) oFile << fileContent[i][j];
+                else oFile << "," << fileContent[i][j];
+            }
+            oFile << endl;
+        }
+        oFile.close();
+        return read;
+    }
+};
+
 class Symbol
 {
 public:
@@ -304,6 +416,32 @@ public:
     
 };
 
+class Grammer
+{
+public:
+    vector<GrammerRule> rules;
+
+    Grammer()
+    {
+
+    }
+    
+    void addRule(string str)
+    {
+        GrammerRule g;
+        g = g.FromString(str);
+        rules.push_back(g);
+    }
+
+    void print()
+    {
+        for (int i = 0; i < rules.size(); i++)
+        {
+            rules[i].print();
+        }
+    }
+};
+
 bool validateCharacter(char c)
 {
     if (c > -1 && c < 255) return true;
@@ -369,7 +507,60 @@ void perform(string filePath)
     fin.close();
 }
 
+void performA(string filePath)
+{
+    csvManager m;
+    m.read(filePath);
+    
+    string oName = filePath.substr(0, filePath.length() - 4) + "_OUT.txt";
+    ofstream oFile;
+    oFile.open(oName);
+
+    for (int i = 0; i < m.fileContent.size(); i++)
+    {
+        for (int j = 0; j < m.fileContent[i].size(); j++)
+        {
+            if (m.fileContent[i][j].length() > 0)
+            {
+                GrammerRule g1;
+                g1 = g1.FromString(m.fileContent[i][j]);
+                if (g1.checkLeftRecursion())
+                {
+                    cout << "Left Recursion Case    " << m.fileContent[i][j] << endl;
+                    oFile << "Left Recursion Case    " << m.fileContent[i][j] << endl;
+                    cout << ".........Solution........." << endl;
+                    oFile << ".........Solution........." << endl;
+                    vector<GrammerRule> result = g1.fixLeftRecursion();
+                    result[0].print();
+                    oFile << result[0].toString();
+                    result[1].print();
+                    oFile << result[1].toString();
+                    cout << ".........................." << endl;
+                    oFile << ".........................." << endl;
+                }
+                else if (g1.checkLeftFactoring())
+                {
+                    cout << "Left Factoring Case    " << m.fileContent[i][j] << endl;
+                    oFile << "Left Factoring Case    " << m.fileContent[i][j] << endl;
+                    cout << ".........Solution........." << endl;
+                    oFile << ".........Solution........." << endl;
+                    vector<GrammerRule> result = g1.fixLeftFactoring();
+                    result[0].print();
+                    oFile << result[0].toString();
+                    result[1].print();
+                    oFile << result[1].toString();
+                    cout << ".........................." << endl;
+                    oFile << ".........................." << endl;
+                }
+            }
+        }
+    }
+    
+    
+}
+
 int main()
 {
-    perform("C:\\infile.csv");
+    performA("E:\\infile.csv");
+
 }
