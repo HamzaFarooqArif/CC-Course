@@ -1,7 +1,0 @@
-﻿  CC-Assignment3.cpp
-C:\Users\Acer\Desktop\CC-Course\CC-Assignment3\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(103,35): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Acer\Desktop\CC-Course\CC-Assignment3\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(133,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Acer\Desktop\CC-Course\CC-Assignment3\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(148,27): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Acer\Desktop\CC-Course\CC-Assignment3\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(166,31): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Acer\Desktop\CC-Course\CC-Assignment3\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(178,35): warning C4018: '<': signed/unsigned mismatch
-  CC-Assignment3.vcxproj -> C:\Users\Acer\Desktop\CC-Course\CC-Assignment3\CC-Assignment3\Debug\CC-Assignment3.exe

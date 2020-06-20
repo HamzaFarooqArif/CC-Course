@@ -1,0 +1,4 @@
+﻿  DoubleBuffer.cpp
+E:\git\CC-Course\CC-Assignment1 - Double Buffer\DoubleBuffer\DoubleBuffer\DoubleBuffer.cpp(112,13): warning C4129: 'g': unrecognized character escape sequence
+E:\git\CC-Course\CC-Assignment1 - Double Buffer\DoubleBuffer\DoubleBuffer\DoubleBuffer.cpp(112,13): warning C4129: 'C': unrecognized character escape sequence
+  DoubleBuffer.vcxproj -> E:\git\CC-Course\CC-Assignment1 - Double Buffer\DoubleBuffer\Debug\DoubleBuffer.exe

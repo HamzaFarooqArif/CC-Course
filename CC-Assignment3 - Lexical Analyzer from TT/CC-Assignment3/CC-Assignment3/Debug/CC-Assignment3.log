@@ -1,0 +1,7 @@
+﻿  CC-Assignment3.cpp
+E:\git\CC-Course\CC-Assignment3 - Lexical Analyzer from TT\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(103,35): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment3 - Lexical Analyzer from TT\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(133,27): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment3 - Lexical Analyzer from TT\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(148,27): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment3 - Lexical Analyzer from TT\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(166,31): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment3 - Lexical Analyzer from TT\CC-Assignment3\CC-Assignment3\CC-Assignment3.cpp(178,35): warning C4018: '<': signed/unsigned mismatch
+  CC-Assignment3.vcxproj -> E:\git\CC-Course\CC-Assignment3 - Lexical Analyzer from TT\CC-Assignment3\Debug\CC-Assignment3.exe

@@ -1,0 +1,16 @@
+﻿  CC-Assignment 6 First and Follow.cpp
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(47,21): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(65,27): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(72,31): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(81,21): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(84,22): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(93,21): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(95,22): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(107,21): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(109,22): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(150,7): warning C4101: 'k': unreferenced local variable
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(279,21): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(281,22): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(295,10): warning C4101: 'choice': unreferenced local variable
+E:\git\CC-Course\CC-Assignment6 - First and Follow\CC-Assignment 6 First and Follow\CC-Assignment 6 First and Follow.cpp(296,11): warning C4101: 'ch': unreferenced local variable
+  CC-Assignment 6 First and Follow.vcxproj -> E:\git\CC-Course\CC-Assignment6 - First and Follow\Debug\CC-Assignment 6 First and Follow.exe
