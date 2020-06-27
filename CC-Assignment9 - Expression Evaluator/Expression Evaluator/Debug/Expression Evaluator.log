@@ -1,0 +1,4 @@
+﻿  Expression Evaluator.cpp
+E:\git\CC-Course\CC-Assignment9 - Expression Evaluator\Expression Evaluator\Expression Evaluator.cpp(26,27): warning C4018: '<': signed/unsigned mismatch
+E:\git\CC-Course\CC-Assignment9 - Expression Evaluator\Expression Evaluator\Expression Evaluator.cpp(29,27): warning C4018: '<': signed/unsigned mismatch
+  Expression Evaluator.vcxproj -> E:\git\CC-Course\CC-Assignment9 - Expression Evaluator\Debug\Expression Evaluator.exe
