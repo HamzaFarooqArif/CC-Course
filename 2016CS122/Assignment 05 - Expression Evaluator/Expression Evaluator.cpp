@@ -44,18 +44,14 @@ int evaluate(node* root)
         return toInteger(root->data);
 
     int l_val = evaluate(root->left);
-
     int r_val = evaluate(root->right);
 
     if (root->data == "+")
         return l_val + r_val;
-
-    if (root->data == "-")
-        return l_val - r_val;
-
     if (root->data == "*")
         return l_val * r_val;
-
+    if (root->data == "-")
+        return l_val - r_val;
     return l_val / r_val;
 }
 
